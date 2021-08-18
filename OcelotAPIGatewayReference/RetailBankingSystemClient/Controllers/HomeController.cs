@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RetailBankingSystemClient.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller                    ///this is a home controller for web api client application
     {
         private readonly ILogger<HomeController> _logger;
 
