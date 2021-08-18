@@ -1,0 +1,29 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/customer",                        //this is the microservice endpoint for Http GET and POST methods
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "/customer",                                  //this is the gateway endpoint for Http GET and POST methods
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/customer/{id}",                 //this is the microservice endpoint for Http GET method with id
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44377"
+        }
+      ],
+      "UpstreamPathTemplate": "/customer/{id}",                           //this is the gateway endpoint for Http GET method with id 
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+}
